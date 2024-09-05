@@ -1275,27 +1275,27 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <executions>
-                            <execution>
-                                <id>create-licenses-for-docker</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>java</goal>
-                                </goals>
-                                <configuration>
-                                    <skip>${docker.skip-build}</skip>
-                                    <mainClass>io.confluent.licenses.LicenseFinder</mainClass>
-                                    <arguments>
-                                        <!-- Note use of development instead of package so we pick up all dependencies.
-                                             This assumes both subprojects will be packaged together. -->
-                                        <argument>-i ${project.build.directory}/${project.build.finalName}-package/share/java/${project.artifactId}</argument>
-                                        <argument>-f</argument>
-                                        <argument>-h ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses.html</argument>
-                                        <argument>-l ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses</argument>
-                                        <argument>-n ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/notices</argument>
-                                        <argument>-x licenses-${io.confluent.license-file-generator.version}.jar</argument>
-                                    </arguments>
-                                </configuration>
-                            </execution>
+<!--                            <execution>-->
+<!--                                <id>create-licenses-for-docker</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>java</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <skip>${docker.skip-build}</skip>-->
+<!--                                    <mainClass>io.confluent.licenses.LicenseFinder</mainClass>-->
+<!--                                    <arguments>-->
+<!--                                        &lt;!&ndash; Note use of development instead of package so we pick up all dependencies.-->
+<!--                                             This assumes both subprojects will be packaged together. &ndash;&gt;-->
+<!--                                        <argument>-i ${project.build.directory}/${project.build.finalName}-package/share/java/${project.artifactId}</argument>-->
+<!--                                        <argument>-f</argument>-->
+<!--                                        <argument>-h ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses.html</argument>-->
+<!--                                        <argument>-l ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses</argument>-->
+<!--                                        <argument>-n ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/notices</argument>-->
+<!--                                        <argument>-x licenses-${io.confluent.license-file-generator.version}.jar</argument>-->
+<!--                                    </arguments>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
                             <execution>
                                 <id>python-docker-tests</id>
                                 <phase>integration-test</phase>
@@ -1429,27 +1429,27 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
                         <executions>
-                            <execution>
-                                <id>create-licenses-for-docker</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>java</goal>
-                                </goals>
-                                <configuration>
-                                    <skip>${docker.skip-build}</skip>
-                                    <mainClass>io.confluent.licenses.LicenseFinder</mainClass>
-                                    <arguments>
-                                        <!-- Note use of development instead of package so we pick up all dependencies.
-                                             This assumes both subprojects will be packaged together. -->
-                                        <argument>-i ${project.build.directory}/${project.build.finalName}-package/share/java/${project.artifactId}</argument>
-                                        <argument>-f</argument>
-                                        <argument>-h ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses.html</argument>
-                                        <argument>-l ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses</argument>
-                                        <argument>-n ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/notices</argument>
-                                        <argument>-x licenses-${io.confluent.license-file-generator.version}.jar</argument>
-                                    </arguments>
-                                </configuration>
-                            </execution>
+<!--                            <execution>-->
+<!--                                <id>create-licenses-for-docker</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>java</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <skip>${docker.skip-build}</skip>-->
+<!--                                    <mainClass>io.confluent.licenses.LicenseFinder</mainClass>-->
+<!--                                    <arguments>-->
+<!--                                        &lt;!&ndash; Note use of development instead of package so we pick up all dependencies.-->
+<!--                                             This assumes both subprojects will be packaged together. &ndash;&gt;-->
+<!--                                        <argument>-i ${project.build.directory}/${project.build.finalName}-package/share/java/${project.artifactId}</argument>-->
+<!--                                        <argument>-f</argument>-->
+<!--                                        <argument>-h ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses.html</argument>-->
+<!--                                        <argument>-l ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/licenses</argument>-->
+<!--                                        <argument>-n ${project.build.directory}/${project.build.finalName}-package/share/doc/${project.artifactId}/notices</argument>-->
+<!--                                        <argument>-x licenses-${io.confluent.license-file-generator.version}.jar</argument>-->
+<!--                                    </arguments>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
                             <execution>
                                 <id>python-docker-tests</id>
                                 <phase>integration-test</phase>
